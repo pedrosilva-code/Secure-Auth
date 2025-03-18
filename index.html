@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure-Auth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Secure-Auth</h1>
+            <p><light>Seus dados guardados conosco</light></p>
+
+            <div class="types-btn">
+                <button class="cad-btn">Cadastrar</button>
+                <button class="etr-btn">Entrar</button>
+            </div>
+
+            <div class="divider">
+                <span>entre com o social</span>
+            </div>
+            
+
+            <div class="social-login">
+                <button class="google-btn">
+                    <img src="png/google.png" alt="Google">
+                </button>
+                <button class="facebook-btn">
+                    <img src="png/facebook.png" alt="Facebook">
+                </button>
+                <button class="apple-btn">
+                    <img src="png/apple.png" alt="Apple">
+                </button>
+            </div>
+
+            <div class="divider">
+                <span>ou continue com o gmail</span>
+            </div>
+
+            <form>
+                <div class="input-box">
+                    <label for="email">
+                        <img src="svg/email.svg" alt="e-mail" class="input-icons">
+                        <input type="email" id="email" placeholder="E-mail">
+                    </label>
+                </div>
+
+                <div class="input-box">
+                    <img src="svg/padlock.svg" alt="padlock" class="input-icons">
+                    <input type="password" id="password" placeholder="Senha">
+                    <button type="button" class="input-btn" id="toggle-password">
+                        <img src="svg/eye-closed.svg" alt="eye" id="eye-icon">
+                    </button>
+                </div>
+
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> Lembre de mim
+                    </label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+
+                <p class="register-link">Não tem uma conta? <a href="#">Criar uma conta</a></p>
+            </form>
+        </div>
+
+        <div class="image-box">
+            <img src="jpeg/island.jpg" alt="Ilha">
+        </div>
+    </div>
+</body>
