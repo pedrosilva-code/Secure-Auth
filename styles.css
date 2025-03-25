@@ -39,14 +39,14 @@ p {
     color: #666;
     margin-bottom: 10px;
 }
-.social-login {
+.types-btn {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin: 15px 0;
 }
 
-.google-btn, .facebook-btn, .apple-btn {
+.cad-btn, .ent-btn {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -58,12 +58,12 @@ p {
     font-size: 14px;
 }
 
-.google-btn img, .facebook-btn img, .apple-btn img {
+.cad-btn img, .ent-btn img {
     width: 18px;
     height: 18px;
 }
 
-.google-btn:hover, .facebook-btn:hover, .apple-btn:hover {
+.cad-btn:hover, .ent-btn:hover {
     background: #f0f0f0;
 }
 .social-login {
