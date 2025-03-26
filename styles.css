@@ -149,6 +149,7 @@ p {
     width: 20px;
     align-items: center;
     justify-content: center;
+    opacity: 0.5;
 }
 
 .input-btn {
@@ -162,6 +163,7 @@ p {
     width: 20px;
     height: 20px;
     z-index: 3; /* Garante que o botão esteja acima do input */
+    opacity: 0.5;
 }
 
 .input-btn img {
