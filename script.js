@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const cadButton = document.querySelector(".cad-btn");
     const entButton = document.querySelector(".ent-btn");
     const form = document.querySelector("form");
-    const inputBox = document.querySelector(".input-box");
     const emailInput = document.getElementById("email");
 
     let isCadastro = true; // Começa com a tela de Cadastrar ativa
@@ -26,10 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Inicia com o Cadastrar ativo
+    // Inicia com "Cadastrar" ativo
     toggleForm("cadastrar");
 
-    // Evento para os botões
+    // Evento para alternar entre os botões
     cadButton.addEventListener("click", () => toggleForm("cadastrar"));
     entButton.addEventListener("click", () => toggleForm("entrar"));
 
@@ -37,9 +36,26 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Impede envio padrão
 
-        if (emailInput.value.trim() === "" || passwordInput.value.trim() === "") {
-            alert("Todos os campos são obrigatórios!");
-        } else {
+        // Removendo mensagens antigas
+        document.querySelectorAll(".error-message").forEach(msg => msg.remove());
+
+        let hasError = false;
+
+        // Função para verificar e adicionar mensagem de erro
+        function checkField(input) {
+            if (input.value.trim() === "") {
+                const errorMessage = document.createElement("span");
+                errorMessage.textContent = "Campo obrigatório";
+                errorMessage.classList.add("error-message");
+                input.parentNode.appendChild(errorMessage);
+                hasError = true;
+            }
+        }
+
+        checkField(emailInput);
+        checkField(passwordInput);
+
+        if (!hasError) {
             alert(isCadastro ? "Cadastro realizado com sucesso!" : "Login efetuado com sucesso!");
             form.reset(); // Limpa os campos
         }

@@ -226,3 +226,9 @@ img {
     color: white;
     border: none;
 }
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
