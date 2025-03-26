@@ -219,3 +219,8 @@ img {
         font-size: 14px;
     }
 }
+.cad-btn.active, .ent-btn.active {
+    background: #4A56E2;
+    color: white;
+    border: none;
+}
